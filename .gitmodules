@@ -1,0 +1,3 @@
+[submodule "lib/Voxengine"]
+	path = lib/Voxengine
+	url = https://github.com/Sayama3/Voxymore

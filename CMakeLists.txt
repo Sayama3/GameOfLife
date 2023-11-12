@@ -13,7 +13,10 @@ add_subdirectory(lib/Voxengine)
 
 target_include_directories(${FRAMEWORK_NAME} PUBLIC include)
 target_sources(${FRAMEWORK_NAME} PUBLIC
-	
+        include/GameOfLifeSystem.hpp
+        src/GameOfLifeSystem.cpp
+        include/GameOfLifeComponent.hpp
+        src/GameOfLifeComponent.cpp
 )
 
 target_compile_definitions(${FRAMEWORK_NAME} PUBLIC GAME_NAME="${GAME_NAME}")
