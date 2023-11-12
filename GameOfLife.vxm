@@ -1,0 +1,5 @@
+Project:
+  Name: Game of Life
+  AssetDirectory: Assets
+  CacheDirectory: Cache
+  SystemDirectory: Systems
