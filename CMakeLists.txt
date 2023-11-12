@@ -17,6 +17,8 @@ target_sources(${FRAMEWORK_NAME} PUBLIC
         src/GameOfLifeSystem.cpp
         include/GameOfLifeComponent.hpp
         src/GameOfLifeComponent.cpp
+        include/CameraController.hpp
+        src/CameraController.cpp
 )
 
 target_compile_definitions(${FRAMEWORK_NAME} PUBLIC GAME_NAME="${GAME_NAME}")

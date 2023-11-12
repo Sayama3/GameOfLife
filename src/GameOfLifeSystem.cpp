@@ -21,8 +21,14 @@ namespace Sayama::GameOfLife {
         auto max = GetMax();
         std::vector<glm::ivec2> toEnable;
         std::vector<glm::ivec2> toDisable;
-        for (int x = min.x-1; x <= max.x+1; ++x) {
-            for (int y = min.y-1; x <= max.y+1; ++x) {
+
+        int realMinX = min.x-1;
+        int realMaxX = max.x+1;
+        int realMinY = min.y-1;
+        int realMaxY = max.y+1;
+
+        for (int x = realMinX; x <= realMaxX; ++x) {
+            for (int y = realMinY; y <= realMaxY; ++y) {
                 glm::ivec2 pos(x,y);
                 if(GetBlockCount(pos) == 0) continue;
                 bool alive = HasEntity(pos);
@@ -98,6 +104,7 @@ namespace Sayama::GameOfLife {
 
     void GameOfLifeSystem::OnStop(Scene& scene)
     {
+        m_PoolEntities.clear();
         m_Entities.clear();
     }
 
@@ -141,8 +148,9 @@ namespace Sayama::GameOfLife {
             id = m_Entities[v];
             auto e = scene.GetEntity(id);
             e.GetComponent<TransformComponent>().SetPosition({v.x, 0, v.y});
-            e.GetComponent<GameOfLifeComponent>().PreviousPosition = v;
-            e.GetComponent<GameOfLifeComponent>().NexState = true;
+            auto& gol = e.GetOrAddComponent<GameOfLifeComponent>();
+            gol.PreviousPosition = v;
+            gol.NexState = true;
         }
         else if(!m_PoolEntities.empty())
         {
@@ -151,16 +159,18 @@ namespace Sayama::GameOfLife {
             auto e = scene.GetEntity(id);
             e.SetActive(true);
             e.GetComponent<TransformComponent>().SetPosition({v.x, 0, v.y});
-            e.GetComponent<GameOfLifeComponent>().PreviousPosition = v;
-            e.GetComponent<GameOfLifeComponent>().NexState = true;
+            auto& gol = e.GetOrAddComponent<GameOfLifeComponent>();
+            gol.PreviousPosition = v;
+            gol.NexState = true;
             m_Entities[v] = id;
         }
         else
         {
             auto e = scene.CreateEntity();
             e.GetComponent<TransformComponent>().SetPosition({v.x, 0, v.y});
-            e.AddComponent<GameOfLifeComponent>().PreviousPosition = v;
-            e.AddComponent<GameOfLifeComponent>().NexState = true;
+            auto& gol = e.GetOrAddComponent<GameOfLifeComponent>();
+            gol.PreviousPosition = v;
+            gol.NexState = true;
             auto& mc = e.AddComponent<ModelComponent>();
             mc.SetPath({FileSource::EditorAsset, "Models/Cube_W.glb"});
             mc.SetShader("Default");

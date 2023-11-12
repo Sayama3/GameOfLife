@@ -1,0 +1,5 @@
+CameraControllerSystem:
+  Enable: true
+  Scenes:
+    - 14930226797332127146
+  Speed: 5

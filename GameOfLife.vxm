@@ -3,3 +3,4 @@ Project:
   AssetDirectory: Assets
   CacheDirectory: Cache
   SystemDirectory: Systems
+  StartSceneId: 14930226797332127146

@@ -1,0 +1,6 @@
+GameOfLifeSystem:
+  Enable: true
+  Scenes:
+    - 14930226797332127146
+  TickTime: 1
+  Pause: true
