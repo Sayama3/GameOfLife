@@ -1,0 +1,145 @@
+Scene:
+  Name: Main Scene
+  UUID: 14930226797332127146
+  Entities:
+    - Entity: 11009516983461362549
+      IsActive: true
+      TagComponent:
+        Tag: GOL_8
+      TransformComponent:
+        Position: [-1, 0, 3]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, -0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [-1, 3]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_W.glb}
+        ShaderName: Default
+    - Entity: 6173794144710087123
+      IsActive: true
+      TagComponent:
+        Tag: GOL_7
+      TransformComponent:
+        Position: [-2, 0, 2]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, -0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [-2, 2]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_W.glb}
+        ShaderName: Default
+    - Entity: 16446160201056959593
+      IsActive: true
+      TagComponent:
+        Tag: GOL_6
+      TransformComponent:
+        Position: [-1, 0, 2]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, -0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [-1, 2]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_B.glb}
+        ShaderName: Default
+    - Entity: 6295643950625079343
+      IsActive: true
+      TagComponent:
+        Tag: GOL_5
+      TransformComponent:
+        Position: [0, 0, 2]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, -0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [0, 2]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_W.glb}
+        ShaderName: Default
+    - Entity: 10226369193566008658
+      IsActive: true
+      TagComponent:
+        Tag: GOL_4
+      TransformComponent:
+        Position: [1, 0, 1]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, -0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [1, 1]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_W.glb}
+        ShaderName: Default
+    - Entity: 721001155621823515
+      IsActive: true
+      TagComponent:
+        Tag: GOL_3
+      TransformComponent:
+        Position: [0, 0, 1]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, -0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [0, 1]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_B.glb}
+        ShaderName: Default
+    - Entity: 8176538483411918954
+      IsActive: true
+      TagComponent:
+        Tag: GOL_02
+      TransformComponent:
+        Position: [1, 0, 0]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, -0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [1, 0]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_B.glb}
+        ShaderName: Default
+    - Entity: 4845178436032225836
+      IsActive: true
+      TagComponent:
+        Tag: GOL_01
+      TransformComponent:
+        Position: [0, 0, 0]
+        Rotation: [0, 0, 0, 1]
+        EulerRotation: [0, 0, 0]
+        Scale: [1, 1, 1]
+      GameOfLifeComponent:
+        PreviousPosition: [0, 0]
+        NexState: false
+      ModelComponent:
+        Path: {Source: 1, Path: Models/Cube_W.glb}
+        ShaderName: Default
+    - Entity: 17438379605263285358
+      IsActive: true
+      TagComponent:
+        Tag: Camera
+      TransformComponent:
+        Position: [0, 10, 0]
+        Rotation: [-0.707106769, 0, 0, 0.707106769]
+        EulerRotation: [-1.57079637, 0, 0]
+        Scale: [1, 1, 1]
+      CameraComponent:
+        Primary: true
+        FixedAspectRatio: false
+        Camera:
+          IsOrthographic: false
+          AspectRatio: 1.14841497
+          OrthographicSize: 10
+          OrthographicNear: -1
+          OrthographicFar: 1
+          PerspectiveVerticalFOV: 1.04719758
+          PerspectiveNear: 0.00999999978
+          PerspectiveFar: 1000

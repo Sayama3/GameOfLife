@@ -7,6 +7,8 @@
 
 namespace Sayama::GameOfLife {
 
+    VXM_CREATE_SYSTEM(GameOfLifeSystem)
+
     void GameOfLifeSystem::Update(Scene &scene, TimeStep ts)
     {
         if(m_Pause) return;
