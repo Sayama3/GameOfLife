@@ -19,6 +19,8 @@ namespace Sayama::GameOfLife {
             virtual void ResetSystem() override;
         public:
             virtual bool OnImGuiRender() override;
+            virtual void OnStart(Scene& scene) override;
+            virtual void OnStop(Scene& scene) override;
             virtual void Update(::Voxymore::Core::Scene& scene, ::Voxymore::Core::TimeStep ts) override;
         private:
             float m_Speed = 5.0f;

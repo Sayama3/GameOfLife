@@ -51,4 +51,12 @@ namespace Sayama::GameOfLife
         }
 
     }
+
+    void CameraControllerSystem::OnStart(Scene &scene) {
+        GameplaySystem::OnStart(scene);
+    }
+
+    void CameraControllerSystem::OnStop(Scene &scene) {
+        GameplaySystem::OnStart(scene);
+    }
 } // Sayama::GameOfLife

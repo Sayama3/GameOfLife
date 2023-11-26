@@ -78,6 +78,9 @@ namespace Sayama::GameOfLife {
 
     void GameOfLifeSystem::OnStart(Scene& scene)
     {
+        m_Entities.clear();
+        m_PoolEntities.clear();
+
         auto view = scene.GetRegistry().view<TransformComponent, GameOfLifeComponent>();
         for(entt::entity e : view)
         {
